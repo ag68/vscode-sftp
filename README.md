@@ -1,12 +1,24 @@
 # sftp sync extension for VS Code
 
+> **🔧 本仓库为自维护 fork**
+>
+> 上游 `Natizyskunk/vscode-sftp` 已长期无维护，本仓库由 [@ag68](https://github.com/ag68) 自行维护，
+> 用于修复与新版 VS Code（内置 Node 23+）的兼容问题。
+> 原始作者与版权归 [@Natizyskunk](https://github.com/Natizyskunk/) 及更早的
+> [@liximomo](https://github.com/liximomo) 所有，本 fork 仅做必要的兼容性修复与定制。
+>
+> - 本仓库：https://github.com/ag68/vscode-sftp
+> - 上游（已停止维护）：https://github.com/Natizyskunk/vscode-sftp
+> - 本维护版扩展 ID：`ag68.sftp`（与上游 `Natizyskunk.sftp` 可共存）
+
 New maintained and updated version by [@Natizyskunk](https://github.com/Natizyskunk/) 😀 <!-- and [@satiromarra](https://github.com/satiromarra) --> <br>
 (Forked from the no longer maintained [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
 
-- VS Code marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
-- VSIX release : https://github.com/Natizyskunk/vscode-sftp/releases/
+- 本维护版源码：https://github.com/ag68/vscode-sftp <br>
+- 上游 VS Code marketplace：https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
+- 上游 VSIX release：https://github.com/Natizyskunk/vscode-sftp/releases/
 
-✳ I would be more than happy to have you participate in one way or another to this project. You can do so by simply following the [templates](https://github.com/Natizyskunk/vscode-sftp/issues/new/choose) when you open a new issue or a new pull request.
+✳ I would be more than happy to have you participate in one way or another to this project. You can do so by simply following the [templates](https://github.com/ag68/vscode-sftp/issues/new/choose) when you open a new issue or a new pull request.
 
 ## ℹ INFOS - 2025/03/13
 I've tried to keep this extension up-to-date as much as I can and added a lot of new relevant features. Saddly, for the last year and a half I wasn't really able to work on the project because of personal reasons and I'm really not sure if and when I'll be able to get more time to work on it again. So for now consider the [v1.16.4](https://github.com/Natizyskunk/vscode-sftp/releases/tag/v1.16.4) as the latest official stable release available.
