@@ -10,6 +10,7 @@ import { tryLoadConfigs } from './modules/config';
 import { getAllFileService, createFileService, disposeFileService } from './modules/serviceManager';
 import { getWorkspaceFolders, setContextValue } from './host';
 import RemoteExplorer from './modules/remoteExplorer';
+import { uninstallUpstreamIfPresent } from './modules/uninstallUpstream';
 
 async function setupWorkspaceFolder(dir) {
   const configs = await tryLoadConfigs(dir);
@@ -28,6 +29,15 @@ function setup(workspaceFolders: vscode.WorkspaceFolder[]) {
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
+  // 必须最先执行：上游扩展与本扩展的命令 ID 完全相同，若同时激活，
+  // 后注册者会抛 "command 'sftp.xxx' already exists"。
+  // 这里先把上游请退出，再注册自己的命令。
+  try {
+    await uninstallUpstreamIfPresent();
+  } catch (error) {
+    reportError(error, 'uninstallUpstream');
+  }
+
   try {
     initCommands(context);
   } catch (error) {
