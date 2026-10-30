@@ -1,3 +1,12 @@
+## 1.0.0 - 2026-10-30
+
+* **本版本为自维护 fork 的首个版本，更名为 ACE SFTP**（上游 `Natizyskunk.sftp` 已停止维护）
+  * 扩展 ID：`ace.ace-sftp`（与上游 `Natizyskunk.sftp` 可共存）
+  * 升级 ssh2 依赖 `1.13.0` → `1.17.0`：Node 23+ 已移除 legacy `util.isDate`，
+    ssh2 自 1.16.0 起改用 `util.types.isDate`，上游已修复
+  * **配置键与命令 ID 保持 `sftp.*` 不变**——用户已有 `settings.json` 配置、
+    快捷键绑定与 `setContext` 条件均不受影响
+
 ## 1.16.4 - 2026-10-27
 * Add download icons (file & folder) inline in the remote explorer treeview (Pull request [#381](https://github.com/Natizyskunk/vscode-sftp/pull/381) from @satiromarra vscode-sftp:dev-download-icons).
 * Add `Refresh Active Remote File` command and editor title button to refresh the currently focused remote file (Pull request [#408](https://github.com/Natizyskunk/vscode-sftp/pull/408) from @atariq11700 vscode-sftp:develop).

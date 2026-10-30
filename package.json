@@ -1,9 +1,9 @@
 {
-  "name": "sftp",
-  "displayName": "SFTP",
-  "description": "SFTP/FTP sync",
-  "version": "1.16.4",
-  "publisher": "ag68",
+  "name": "ace-sftp",
+  "displayName": "ACE SFTP",
+  "description": "SFTP/FTP sync (self-maintained fork of Natizyskunk.sftp)",
+  "version": "1.0.0",
+  "publisher": "ace",
   "author": "ag68 (https://github.com/ag68), fork of Natizyskunk (https://github.com/Natizyskunk)",
   "engines": {
     "vscode": "^1.64.2"

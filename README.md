@@ -1,15 +1,17 @@
-# sftp sync extension for VS Code
+# ACE SFTP — sftp sync extension for VS Code
 
-> **🔧 本仓库为自维护 fork**
+> **🔧 本仓库为自维护 fork，重命名为 ACE SFTP**
 >
-> 上游 `Natizyskunk/vscode-sftp` 已长期无维护，本仓库由 [@ag68](https://github.com/ag68) 自行维护，
+> 上游 `Natizyskunk/vscode-sftp` 已长期无维护，本仓库自行维护并更名为 **ACE SFTP**，
 > 用于修复与新版 VS Code（内置 Node 23+）的兼容问题。
 > 原始作者与版权归 [@Natizyskunk](https://github.com/Natizyskunk/) 及更早的
 > [@liximomo](https://github.com/liximomo) 所有，本 fork 仅做必要的兼容性修复与定制。
 >
 > - 本仓库：https://github.com/ag68/vscode-sftp
 > - 上游（已停止维护）：https://github.com/Natizyskunk/vscode-sftp
-> - 本维护版扩展 ID：`ag68.sftp`（与上游 `Natizyskunk.sftp` 可共存）
+> - **本维护版扩展 ID：`ace.ace-sftp`**（与上游 `Natizyskunk.sftp` 可共存）
+> - **配置键保持 `sftp.*` 不变**——沿用上游命名，用户已有 `settings.json` 配置继续生效
+> - 命令 ID 保持 `sftp.*` 不变——快捷键绑定与 `setContext` 条件均不受影响
 
 New maintained and updated version by [@Natizyskunk](https://github.com/Natizyskunk/) 😀 <!-- and [@satiromarra](https://github.com/satiromarra) --> <br>
 (Forked from the no longer maintained [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
@@ -17,6 +19,9 @@ New maintained and updated version by [@Natizyskunk](https://github.com/Natizysk
 - 本维护版源码：https://github.com/ag68/vscode-sftp <br>
 - 上游 VS Code marketplace：https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
 - 上游 VSIX release：https://github.com/Natizyskunk/vscode-sftp/releases/
+
+> 本维护版暂未发布到 Marketplace，请从本仓库构建 `.vsix` 安装：
+> `npm install && npm run compile && vsce package --out ace-sftp-1.0.0.vsix`
 
 ✳ I would be more than happy to have you participate in one way or another to this project. You can do so by simply following the [templates](https://github.com/ag68/vscode-sftp/issues/new/choose) when you open a new issue or a new pull request.
 
@@ -50,6 +55,19 @@ VSCode-SFTP enables you to add, edit or delete files within a local directory an
 - [FAQ](#FAQ)
 
 ## Installation
+
+> **ACE SFTP（本维护版）暂未发布到 Marketplace**，请从源码构建 `.vsix` 安装：
+> ```bash
+> git clone git@github.com:ag68/vscode-sftp.git
+> cd vscode-sftp
+> npm install && npm run compile
+> vsce package --out ace-sftp-1.0.0.vsix
+> code --install-extension ace-sftp-1.0.0.vsix
+> ```
+> 安装后扩展 ID 为 `ace.ace-sftp`，可与上游 `Natizyskunk.sftp` **共存**。
+> 配置键仍为 `sftp.*`，沿用上游命名，已有配置无需修改。
+
+### 上游版本安装方式（供参照）
 
 ### Method 1 (Recommended : Auto update)
 1. Select Extensions (Ctrl + Shift + X).
